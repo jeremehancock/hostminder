@@ -37,6 +37,16 @@ and `# End of custom host records.`.
 
 If you decide to turn off Host Minder the entries in this section will be used to create your `/etc/hsots` file.
 
+## How to use:
+
+In a terminal run the following.
+
+```git clone https://github.com/mhancoc7/hostminder.git```
+
+```cd hostminder```
+
+```./hostminder.sh```
+
 ## Disclaimer
 
 All code is provided as-is without any warranty. This tool will download and setup a new hosts file. It will be making
