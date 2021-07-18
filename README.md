@@ -1,3 +1,4 @@
+![Logo](https://raw.githubusercontent.com/mhancoc7/hostminder/main/hostminder.png)
 # Host Minder
 
 This simple GUI allows you to easily update your `/etc/hosts` file to one of four consolidated hosts files
