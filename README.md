@@ -38,16 +38,6 @@ and `# End of custom host records.`.
 
 If you decide to turn off Host Minder the entries in this section will be used to create your `/etc/hsots` file.
 
-## How to use:
-
-In a terminal run the following.
-
-```git clone https://github.com/mhancoc7/hostminder.git```
-
-```cd hostminder```
-
-```./hostminder.sh```
-
 ## Install Host Minder Ubuntu:
 
 Download the deb package from https://github.com/mhancoc7/hostminder/blob/main/deb/hostminder_1.0_all.deb
@@ -57,6 +47,16 @@ In a terminal run the following from the directory where the deb package was dow
 ```sudo dpkg -i hostminder_1.0_all.deb```
 
 Host Minder should now be available in your applications menu.
+
+## How to use without installing:
+
+In a terminal run the following.
+
+```git clone https://github.com/mhancoc7/hostminder.git```
+
+```cd hostminder```
+
+```./hostminder.sh```
 
 ## Disclaimer
 
