@@ -36,7 +36,7 @@ ff02::2 ip6-allrouters
 If you need to add additional entries simply add them to this section between `# Custom host records are listed here.`
 and `# End of custom host records.`.
 
-If you decide to turn off Host Minder the entries in this section will be used to create your `/etc/hsots` file.
+If you decide to turn off Host Minder the entries in this section will be used to create your `/etc/hosts` file.
 
 ## Install Host Minder Ubuntu:
 
