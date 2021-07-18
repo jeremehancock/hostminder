@@ -47,6 +47,16 @@ In a terminal run the following.
 
 ```./hostminder.sh```
 
+## Install Host Minder Ubuntu:
+
+Download the deb package from https://github.com/mhancoc7/hostminder/blob/main/deb/hostminder_1.0_all.deb
+
+In a terminal run the following from the directory where the deb package was downloaded.
+
+```sudo dpkg -i hostminder_1.0_all.deb```
+
+Host Minder should now be available in your applications menu.
+
 ## Disclaimer
 
 All code is provided as-is without any warranty. This tool will download and setup a new hosts file. It will be making
