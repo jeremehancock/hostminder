@@ -78,7 +78,7 @@ settings() {
     UPDATE="What's Host Minder?"
     HELP=""
   fi
-  SWITCH=$(zenity --list --title="$APP_TITLE: Settings" --width=400 --height=275 --text="Status: <span color='$STATUS_COLOR'><b>$STATUS</b></span>$LEVEL$DOMAINS\n" --column= --hide-header "Turn $TOGGLE" "$UPDATE" "$HELP")
+  SWITCH=$(zenity --window-icon=/usr/share/pixmaps/hostminder.png --list --title="$APP_TITLE: Settings" --width=400 --height=275 --text="Status: <span color='$STATUS_COLOR'><b>$STATUS</b></span>$LEVEL$DOMAINS\n" --column= --hide-header "Turn $TOGGLE" "$UPDATE" "$HELP")
   case $SWITCH in
 
   "Turn ON")
@@ -106,13 +106,13 @@ settings() {
 
 select_level() {
   if [[ $1 == "fresh" ]]; then
-    zenity --info --title "$APP_TITLE" --width=450 --text $"<big>This tool will download and setup a new /etc/hosts file.\n\nIt will be making changes to your system and should be USED AT YOUR OWN RISK!\n\nIt is recommended that you have system backups.</big>"
+    zenity --window-icon=/usr/share/pixmaps/hostminder.png --info --title "$APP_TITLE" --width=450 --text $"<big>This tool will download and setup a new /etc/hosts file.\n\nIt will be making changes to your system and should be USED AT YOUR OWN RISK!\n\nIt is recommended that you have system backups.</big>"
   fi
   STATUS=$(check_status)
   STATUS_COLOR=$(get_status_color)
   LEVEL=$(get_level)
   DOMAINS=$(get_total_domains)
-  SELECT=$(zenity --list --title="$APP_TITLE: Settings" --width=400 --height=350 --text="Status: <span color='$STATUS_COLOR'><b>$STATUS</b></span>$LEVEL$DOMAINS\n\nSelect Protection Level" --column=Name --column=Description Max "Ads / Porn / Gambling / Social / Fake News" High "Ads / Porn / Gambling / Social" Medium "Ads / Porn / Gambling" Low "Ads / Porn")
+  SELECT=$(zenity --window-icon=/usr/share/pixmaps/hostminder.png --list --title="$APP_TITLE: Settings" --width=400 --height=350 --text="Status: <span color='$STATUS_COLOR'><b>$STATUS</b></span>$LEVEL$DOMAINS\n\nSelect Protection Level" --column=Name --column=Description Max "Ads / Porn / Gambling / Social / Fake News" High "Ads / Porn / Gambling / Social" Medium "Ads / Porn / Gambling" Low "Ads / Porn")
   case $SELECT in
 
   "Max")
@@ -140,7 +140,7 @@ select_level() {
 
 confirm() {
   if
-    zenity --question --title "$APP_TITLE" --no-wrap --text="Are you sure?"
+    zenity --window-icon=/usr/share/pixmaps/hostminder.png --question --title "$APP_TITLE" --no-wrap --text="Are you sure?"
   then
     return
   else
@@ -149,11 +149,11 @@ confirm() {
 }
 
 general_failure() {
-  zenity --error --title "$APP_TITLE" --no-wrap --text="Something went wrong!"
+  zenity --window-icon=/usr/share/pixmaps/hostminder.png --error --title "$APP_TITLE" --no-wrap --text="Something went wrong!"
 }
 
 wget_failure() {
-  zenity --error --title "$APP_TITLE" --no-wrap --text="Could not download hosts file.\n\nPlease check your internet connection!"
+  zenity --window-icon=/usr/share/pixmaps/hostminder.png --error --title "$APP_TITLE" --no-wrap --text="Could not download hosts file.\n\nPlease check your internet connection!"
 }
 
 FALLBACK="127.0.0.1 localhost
@@ -253,7 +253,8 @@ update_hosts() {
       --auto-close \
       --auto-kill \
       --no-cancel \
-      --pulsate
+      --pulsate \
+      --window-icon=/usr/share/pixmaps/hostminder.png
 
   (($? != 0)) && general_failure
 
@@ -314,9 +315,10 @@ revert_hosts() {
       --auto-close \
       --auto-kill \
       --no-cancel \
-      --pulsate
+      --pulsate \
+      --window-icon=/usr/share/pixmaps/hostminder.png
 
-  (($? != 0)) && zenity --error --text="Error in zenity command."
+  (($? != 0)) && zenity --window-icon=/usr/share/pixmaps/hostminder.png --error --text="Error in zenity command."
 
   settings
 }
