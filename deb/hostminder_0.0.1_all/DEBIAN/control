@@ -1,5 +1,5 @@
 Package: hostminder
-Version: 1.0
+Version: 0.0.1
 Section: web
 Priority: optional
 Architecture: all
