@@ -40,7 +40,7 @@ If you decide to turn off Host Minder the entries in this section will be used t
 
 ## Install Host Minder Ubuntu:
 
-Download the deb package from https://github.com/mhancoc7/hostminder/blob/main/deb/hostminder_1.0_all.deb
+Download the deb package from https://github.com/mhancoc7/hostminder/blob/main/deb/hostminder_0.0.1_all.deb
 
 In a terminal run the following from the directory where the deb package was downloaded.
 
