@@ -1,9 +1,10 @@
 Package: hostminder
-Version: 0.0.1
+Version: 0.0.2
 Section: web
 Priority: optional
 Architecture: all
 Maintainer: Jereme Hancock <support@ubuntuce.com>
+Installed-Size: 51.7
 Depends: zenity
 Description: Host Minder
 

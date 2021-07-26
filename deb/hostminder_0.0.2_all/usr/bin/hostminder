@@ -45,7 +45,7 @@ get_toggle() {
 get_status_color() {
   STATUS=$(check_status)
   if [[ $STATUS == *"ON"* ]]; then
-    echo "#00FF00"
+    echo "#228B22"
   else
     echo "#CC0000"
   fi
@@ -65,20 +65,40 @@ get_total_domains() {
   fi
 }
 
+check_safe_searchstatus() {
+  STATUS=$(tail /etc/hosts | grep "216.239.38.120     www.google.com     #forcesafesearch" | awk '{print $0}')
+  if [[ $STATUS == "216.239.38.120     www.google.com     #forcesafesearch" ]]; then
+    echo "ENABLED"
+  else
+    echo "DISABLED"
+  fi
+}
+
+get_safe_searchstatus_color() {
+  STATUS=$(check_safe_searchstatus)
+  if [[ $STATUS == *"ENABLED"* ]]; then
+    echo "#228B22"
+  else
+    echo "#CC0000"
+  fi
+}
+
 settings() {
   STATUS=$(check_status)
   STATUS_COLOR=$(get_status_color)
   TOGGLE=$(get_toggle)
   LEVEL=$(get_level)
   DOMAINS=$(get_total_domains)
+  SAFESEARCH_STATUS=$(check_safe_searchstatus)
+  SAFESEARCH_STATUS_COLOR=$(get_safe_searchstatus_color)
   if [[ $STATUS == "ON" ]]; then
-    UPDATE="Change Protection Level"
+    UPDATE="Change/Update Protection Level"
     HELP="What's Host Minder?"
   else
     UPDATE="What's Host Minder?"
     HELP=""
   fi
-  SWITCH=$(zenity --window-icon=/usr/share/pixmaps/hostminder.png --list --title="$APP_TITLE: Settings" --width=400 --height=275 --text="Status: <span color='$STATUS_COLOR'><b>$STATUS</b></span>$LEVEL$DOMAINS\n" --column= --hide-header "Turn $TOGGLE" "$UPDATE" "$HELP")
+  SWITCH=$(zenity --window-icon=/usr/share/pixmaps/hostminder.png --list --title="$APP_TITLE: Settings" --width=400 --height=275 --text="Status: <span color='$STATUS_COLOR'><b>$STATUS</b></span>$LEVEL$DOMAINS\n\nGoogle Safe Search: <span color='$SAFESEARCH_STATUS_COLOR'><b>$SAFESEARCH_STATUS</b></span>\n" --column= --hide-header "Turn $TOGGLE" "$UPDATE" "$HELP")
   case $SWITCH in
 
   "Turn ON")
@@ -89,7 +109,7 @@ settings() {
     revert_hosts
     ;;
 
-  "Change Protection Level")
+  "Change/Update Protection Level")
     select_level
     ;;
 
@@ -112,7 +132,9 @@ select_level() {
   STATUS_COLOR=$(get_status_color)
   LEVEL=$(get_level)
   DOMAINS=$(get_total_domains)
-  SELECT=$(zenity --window-icon=/usr/share/pixmaps/hostminder.png --list --title="$APP_TITLE: Settings" --width=400 --height=350 --text="Status: <span color='$STATUS_COLOR'><b>$STATUS</b></span>$LEVEL$DOMAINS\n\nSelect Protection Level" --column=Name --column=Description Max "Ads / Porn / Gambling / Social / Fake News" High "Ads / Porn / Gambling / Social" Medium "Ads / Porn / Gambling" Low "Ads / Porn")
+  SAFESEARCH_STATUS=$(check_safe_searchstatus)
+  SAFESEARCH_STATUS_COLOR=$(get_safe_searchstatus_color)
+  SELECT=$(zenity --window-icon=/usr/share/pixmaps/hostminder.png --list --title="$APP_TITLE: Settings" --width=400 --height=350 --text="Status: <span color='$STATUS_COLOR'><b>$STATUS</b></span>$LEVEL$DOMAINS\n\nGoogle Safe Search: <span color='$SAFESEARCH_STATUS_COLOR'><b>$SAFESEARCH_STATUS</b></span>\n\nSelect Protection Level" --column=Name --column=Description Max "Ads / Porn / Gambling / Social / Fake News" High "Ads / Porn / Gambling / Social" Medium "Ads / Porn / Gambling" Low "Ads / Porn")
   case $SELECT in
 
   "Max")
@@ -213,6 +235,10 @@ update_hosts() {
         echo '# Adding current hosts entries to new hosts file.\n';
         sleep 2;
         sed -i -e '/# Custom host records are listed here./r /etc/hosts_hostminder_bak' /etc/hosts;
+        
+        echo '# Enabling Google Safe Search';
+        echo '# Google Safe Search' >> /etc/hosts;
+        echo '216.239.38.120     www.google.com     #forcesafesearch' >> /etc/hosts;
 
         if ! grep -q '[^[:space:]]' /etc/hosts; then
           echo '# Something went wrong! Reverting to fallback hosts file.\n';

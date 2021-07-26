@@ -21,6 +21,8 @@ Host Minder has these setup into four "protection levels".
 When you enable Host Minder your existing `/etc/hosts` entries are added to the downloaded `hosts` file inside a special
 section.
 
+Note: All protection levels also include enabling Google Safe Search.
+
 Example:
 
 ```
