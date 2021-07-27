@@ -40,13 +40,13 @@ and `# End of custom host records.`.
 
 If you decide to turn off Host Minder the entries in this section will be used to create your `/etc/hosts` file.
 
-## Install Host Minder Ubuntu:
+## Install Host Minder on Ubuntu:
 
 Download the latest deb package from https://github.com/mhancoc7/hostminder/tree/main/deb.
 
 In a terminal run the following from the directory where the deb package was downloaded.
 
-```sudo dpkg -i hostminder_1.0_all.deb```
+```sudo dpkg -i hostminder_0.0.2_all.deb```
 
 Host Minder should now be available in your applications menu.
 
