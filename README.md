@@ -41,7 +41,7 @@ If you decide to turn off Host Minder the entries in this section will be used t
 
 ## Installed by default on Ubuntuce:
 
-### [Check out UbuntuCE](https://ubuntuce.com/)
+### [Check out UbuntuCE](https://ubuntuce.com/).
 
 ## Install Host Minder on Ubuntu:
 
