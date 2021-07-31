@@ -45,6 +45,12 @@ If you decide to turn off Host Minder the entries in this section will be used t
 
 ## Install Host Minder on Ubuntu:
 
+### Option 1:
+
+Host Minder is available in the [UbuntuCE Repo](https://github.com/mhancoc7/repo.ubuntuce.com#readme)
+
+### Option 2:
+
 Download the latest deb package from https://github.com/mhancoc7/hostminder/tree/main/deb.
 
 In a terminal run the following from the directory where the deb package was downloaded.
