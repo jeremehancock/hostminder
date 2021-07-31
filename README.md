@@ -1,4 +1,4 @@
-<h1><img src="https://raw.githubusercontent.com/mhancoc7/hostminder/main/hostminder.png" height="50" /> Host Minder</h1>
+<h1><img src="https://raw.githubusercontent.com/mhancoc7/hostminder/main/hostminder.png" height="50" style="vertical-align:middle" /> Host Minder</h1>
 
 This simple GUI allows you to easily update your `/etc/hosts` file to one of four consolidated hosts files
 from [StevenBlack/hosts](https://github.com/StevenBlack/hosts).
