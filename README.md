@@ -1,7 +1,5 @@
 <h1><img src="https://raw.githubusercontent.com/mhancoc7/hostminder/main/hostminder.png" height="50" /> Host Minder</h1>
 
-## [UbuntuCE](https://ubuntuce.com/)
-
 This simple GUI allows you to easily update your `/etc/hosts` file to one of four consolidated hosts files
 from [StevenBlack/hosts](https://github.com/StevenBlack/hosts).
 
@@ -40,6 +38,10 @@ If you need to add additional entries simply add them to this section between `#
 and `# End of custom host records.`.
 
 If you decide to turn off Host Minder the entries in this section will be used to create your `/etc/hosts` file.
+
+## Installed by default on Ubuntuce:
+
+### [Check out UbuntuCE](https://ubuntuce.com/)
 
 ## Install Host Minder on Ubuntu:
 
