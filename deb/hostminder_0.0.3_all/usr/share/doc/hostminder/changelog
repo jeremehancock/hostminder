@@ -1,0 +1,17 @@
+hostminder (0.0.1) focal; urgency=optional
+
+   * Initial release
+
+ -- Jereme Hancock <support@ubuntuce.com>  Sun, 18 Jul 2021 10:10:10 +0600
+ 
+ hostminder (0.0.2) focal; urgency=optional
+
+   * Added Google Safe Search
+
+ -- Jereme Hancock <support@ubuntuce.com>  Sun, 25 Jul 2021 8:15:17 +0600
+ 
+  hostminder (0.0.3) focal; urgency=optional
+
+   * Updated Google Safe Search to cover all Google domains
+
+ -- Jereme Hancock <support@ubuntuce.com>  Sun, 31 Jul 2021 2:32:07 +0600
