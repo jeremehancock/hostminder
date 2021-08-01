@@ -55,7 +55,9 @@ Download the latest deb package from https://github.com/mhancoc7/hostminder/tree
 
 In a terminal run the following from the directory where the deb package was downloaded.
 
-```sudo dpkg -i hostminder_0.0.2_all.deb```
+```sudo dpkg -i hostminder_x.x.x_all.deb```
+
+Replace x.x.x with the latest version.
 
 Host Minder should now be available in your applications menu.
 
