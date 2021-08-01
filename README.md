@@ -39,7 +39,7 @@ and `# End of custom host records.`.
 
 If you decide to turn off Host Minder the entries in this section will be used to create your `/etc/hosts` file.
 
-## Installed by default on Ubuntuce:
+## Installed by default on UbuntuCE:
 
 ### [Check out UbuntuCE](https://ubuntuce.com/).
 
