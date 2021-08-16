@@ -8,7 +8,7 @@ from [StevenBlack/hosts](https://github.com/StevenBlack/hosts).
 These consolidated hosts files allow you to block websites from various categories such as Ads, Porn, Gambling, Social,
 and Fake News.
 
-Host Minder has these setup into four "protection levels".
+Host Minder has them setup into four Protection Levels.
 
 * Low
     * Ads / Porn
@@ -21,8 +21,6 @@ Host Minder has these setup into four "protection levels".
 
 When you enable Host Minder your existing `/etc/hosts` entries are added to the downloaded `hosts` file inside a special
 section.
-
-Note: All protection levels also include enabling Google Safe Search.
 
 Example:
 
@@ -40,6 +38,12 @@ If you need to add additional entries simply add them to this section between `#
 and `# End of custom host records.`.
 
 If you decide to turn off Host Minder the entries in this section will be used to create your `/etc/hosts` file.
+
+All protection levels also include enabling Google Safe Search.
+
+Host Minder automatically updates your selected Protection Level once a week.
+
+**Note:** *Auto update is only available when Host Minder is installed to your system.*
 
 ## Installed by default on UbuntuCE:
 
