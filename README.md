@@ -57,12 +57,6 @@ Host Minder is available in the [UbuntuCE Repo](https://github.com/jeremehancock
 
 ### Option 2:
 
-Host Minder requires `zenity`.
-
-In a terminal run the following.
-
-```sudo apt install zenity```
-
 Download the latest deb package from https://github.com/jeremehancock/hostminder/tree/main/deb.
 
 In a terminal run the following from the directory where the deb package was downloaded.
@@ -75,11 +69,7 @@ Host Minder should now be available in your applications menu.
 
 ## How to use without installing:
 
-Host Minder requires `zenity`.
-
 In a terminal run the following.
-
-```sudo apt install zenity```
 
 ```git clone https://github.com/jeremehancock/hostminder.git```
 
