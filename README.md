@@ -35,11 +35,13 @@ ff02::2 ip6-allrouters
 ```
 
 If you need to add additional entries simply add them to this section between `# Custom host records are listed here.`
-and `# End of custom host records.`.
+and `# End of custom host records.`
 
 If you decide to turn off Host Minder the entries in this section will be used to create your `/etc/hosts` file.
 
 All protection levels also include enabling Google Safe Search.
+
+There is an `Allow List` option. This is handy if you find that a particular Protection Level is blocking a domain that you need access to.
 
 Host Minder automatically updates your selected Protection Level once a week.
 
@@ -57,11 +59,22 @@ Host Minder is available in the [UbuntuCE Repo](https://github.com/jeremehancock
 
 ### Option 2:
 
+Host Minder requires `zenity`.
+
+In a terminal run the following.
+
+```
+sudo apt install zenity
+```
+
+
 Download the latest deb package from https://github.com/jeremehancock/hostminder/tree/main/deb.
 
 In a terminal run the following from the directory where the deb package was downloaded.
 
-```sudo dpkg -i hostminder_x.x.x_all.deb```
+```
+sudo dpkg -i hostminder_x.x.x_all.deb
+```
 
 Replace x.x.x with the latest version.
 
@@ -69,13 +82,26 @@ Host Minder should now be available in your applications menu.
 
 ## How to use without installing:
 
+Host Minder requires `zenity`.
+
+
 In a terminal run the following.
 
-```git clone https://github.com/jeremehancock/hostminder.git```
+```
+sudo apt install zenity
+```
 
-```cd hostminder```
+```
+git clone https://github.com/jeremehancock/hostminder.git
+```
 
-```./hostminder.sh```
+```
+cd hostminder
+```
+
+```
+./hostminder.sh
+```
 
 ## Disclaimer
 
