@@ -1,0 +1,7 @@
+#!/bin/bash
+
+mkdir /opt/hostminder
+touch /opt/hostminder/allow
+echo $'# Host Minder Allow List\n# Add one domain per line below (Do not include http:// or https://)' > /opt/hostminder/allow
+
+exit 0
