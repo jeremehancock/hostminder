@@ -47,61 +47,9 @@ Host Minder automatically updates your selected Protection Level once a week.
 
 **Note:** *Auto update is only available when Host Minder is installed to your system.*
 
-## Installed by default on UbuntuCE:
+## Built for UbuntuCE:
 
-### [Check out UbuntuCE](https://ubuntuce.com/).
-
-## Install Host Minder on Ubuntu:
-
-### Option 1:
-
-Host Minder is available in the [UbuntuCE Repo](https://github.com/jeremehancock/repo.ubuntuce.com#readme)
-
-### Option 2:
-
-Host Minder requires `zenity`.
-
-In a terminal run the following.
-
-```
-sudo apt install zenity
-```
-
-
-Download the latest deb package from https://github.com/jeremehancock/hostminder/tree/main/deb.
-
-In a terminal run the following from the directory where the deb package was downloaded.
-
-```
-sudo dpkg -i hostminder_x.x.x_all.deb
-```
-
-Replace x.x.x with the latest version.
-
-Host Minder should now be available in your applications menu.
-
-## How to use without installing:
-
-Host Minder requires `zenity`.
-
-
-In a terminal run the following.
-
-```
-sudo apt install zenity
-```
-
-```
-git clone https://github.com/jeremehancock/hostminder.git
-```
-
-```
-cd hostminder
-```
-
-```
-./hostminder.sh
-```
+### [Check out UbuntuCE](https://ubuntuce.com/)
 
 ## Disclaimer
 
