@@ -45,8 +45,6 @@ There is an `Allow List` option. This is handy if you find that a particular Pro
 
 Host Minder automatically updates your selected Protection Level once a week.
 
-**Note:** *Auto update is only available when Host Minder is installed to your system.*
-
 ## Built for UbuntuCE:
 
 ### [Check out UbuntuCE](https://ubuntuce.com/)
