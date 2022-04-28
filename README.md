@@ -1,6 +1,6 @@
 <h1><img src="https://raw.githubusercontent.com/jeremehancock/hostminder/main/hostminder.png" height="50" /> Host Minder</h1>
 
-<img src="https://raw.githubusercontent.com/jeremehancock/hostminder/main/hostminder-window.png" />
+<img src="https://raw.githubusercontent.com/jeremehancock/hostminder/main/hostminder-job.png" />
 
 This simple GUI allows you to easily update your `/etc/hosts` file to one of four consolidated hosts files
 from [StevenBlack/hosts](https://github.com/StevenBlack/hosts).
