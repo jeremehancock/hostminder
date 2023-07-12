@@ -288,7 +288,7 @@ update_hosts() {
           then
             echo '# \nExtracting custom entries\n'
             sleep 2
-            sed -n '/# \nCustom host records are listed here./I,/# End of custom host records./I{ /# /Id; p }' /etc/hosts > /etc/hosts_hostminder_bak
+            sed -n '/# Custom host records are listed here./I,/# End of custom host records./I{ /# /Id; p }' /etc/hosts > /etc/hosts_hostminder_bak
           else
             echo '# \nBacking up current hosts file\n'
             sleep 2
