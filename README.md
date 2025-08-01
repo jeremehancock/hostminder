@@ -1,3 +1,5 @@
+## [Project End of Life Notice](https://ubuntuce.com)
+
 <h1><img src="https://raw.githubusercontent.com/jeremehancock/hostminder/main/hostminder.png" height="50" /> Host Minder</h1>
 
 <img src="https://raw.githubusercontent.com/jeremehancock/hostminder/main/hostminder-job.png" />
